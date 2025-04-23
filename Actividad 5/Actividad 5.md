@@ -52,7 +52,7 @@ Elegir la estrategia de fusión adecuada es una decisión crítica para mantener
 
 Como no podemos clonar algún repositorio remoto de múltiples ramas que tengamos haremos uno nosotros de forma local. En este creamos un archivo `README.md` que inicializará el historial de estos cambios, luego crearemos una nueva rama llamada `feature` donde haremos ciertos cambios a el mismo archivo. 
 
-![[../images/excercise_1_1.png]]
+![[images/excercise_1_1.png]]
 
 Nos cambiamos a la rama main y ejecutamos el comando `git merge --ff`, si encontrásemos algún conflicto se tendrá que resolver manualmente, ahora cuando se halla realizado la combinación podremos ver nuestro historial de forma gráfica como `git log --graph --oneline`.
 
