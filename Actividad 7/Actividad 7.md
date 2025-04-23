@@ -62,23 +62,23 @@ El proyecto tiene la siguiente estructura de directorios:
 Dentro de un proyecto ya contamos con un soporte para el proceso de expresiones regulares que incluyan horas con minutos y solamente minutos; sin embargo, falta aquella que maneja solo segundos y mezclas entre ellos. 
 Editaremos dentro de la función `step_when_wait_time_description`, para añadir la aceptación de expresiones regulares con segundos.
 
-![[Software Development/Actividad 7/images/excercise_1_1.png]]
+![](images/excercise_1_1.png)
 
 Además también configuramos que la descripción del tiempo pueda descartar comas para prevenir posibles errores.
 
-![[Software Development/Actividad 7/images/excercise_1_2.png]]
+![](images/excercise_1_2.png)
 
 Así mismo añadimos nuevos escenarios dentro de nuestro archivo `belly.feature` como se muestra en la siguiente imagen.
 
-![[excercise_1_4.png]]
+![](images/excercise_1_4.png)
 
 Junto con ellos también definimos la carpeta `tests/unit_tests` donde guardamos los archivos definidos con la clase `pytest` para la prueba directa de algunas funciones, en este caso nos aseguramos de que el parseador opere con normalidad.
 
-![[excercise_1_5.png]]
+![](images/excercise_1_5.png)
 
 Por último estamos definiendo nuestro entorno DevOps con la integración de pruebas unitarias y pruebas BDD dentro de la carpeta `.github/workflows` en el archivo `ci.yml`
 
-![[Software Development/Actividad 7/images/excercise_1_3.png]]
+![](images/excercise_1_3.png)
 
 #### Ejercicio 2: **Manejo de cantidades fraccionarias de pepinos**
 
@@ -112,19 +112,19 @@ Escenario: Comer una cantidad fraccionaria de pepinos
 **Solución**
 Para los requerimientos de esta pregunta modificamos la clase Belly de la siguiente forma:
 
-![[Software Development/Actividad 7/images/excercise_2_1.png]]
+![](images/excercise_2_1.png)
 
 Dentro del archivo `belly_steps.py` definimos un tipo de valor personalizado para reproducir errores y permitir solo cierto tipo de valores para aquellos que sean designados como número de pepinos a comer:
 
-![[Software Development/Actividad 7/images/excercise_2_2.png]]
+![](images/excercise_2_2.png)
 
 Modificamos el archivo `belly.features` para agregar nuevas pruebas que validen estas nuevas restricciones.
 
-![[Software Development/Actividad 7/images/excercise_2_3.png]]
+![](images/excercise_2_3.png)
 
 Por último, generamos el archivo `test_belly.py` que establezca pruebas unitarias para la verificación de los cambios hechos dentro de `belly.py`.
 
-![[Software Development/Actividad 7/images/excercise_2_4.png]]
+![](images/excercise_2_4.png)
 
 #### Ejercicio 3: **Soporte para idiomas múltiples (Español e Inglés)**
 
