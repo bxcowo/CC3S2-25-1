@@ -204,7 +204,7 @@ $ git checkout feature-user-story-1
 $ git rebase main
 ```
 
-![](images/excercise_2_2 1.png)
+![](images/excercise_2_2%201.png)
 
 **Pregunta:** ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
 
