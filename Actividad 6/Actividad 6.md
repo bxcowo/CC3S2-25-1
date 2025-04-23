@@ -81,11 +81,11 @@ Cuando estoy implementando una característica fundamentalmente clave para el de
    $ git merge feature --ff-only
    ```
 
-![[Software Development/Actividad 6/images/excercise_1_1.png]]
+![](images/excercise_1_1.png)
 
-![[Software Development/Actividad 6/images/excercise_1_2.png]]
+![](images/excercise_1_2.png)
 
-![[Software Development/Actividad 6/images/excercise_1_3.png]]
+![](images/excercise_1_3.png)
 
 2. **Cherry-pick para integración selectiva en un pipeline CI/CD**
 
@@ -132,13 +132,13 @@ Permite tener un mayor control sobre lo que se presume que es aceptado hacia pro
    $ git cherry-pick <hash_del_commit2>
    ```
 
-![[Software Development/Actividad 6/images/excercise_2_1.png]]
+![](images/excercise_2_1.png)
 
-![[Software Development/Actividad 6/images/excercise_2_2.png]]
+![](images/excercise_2_2.png)
 
-![[Software Development/Actividad 6/images/excercise_2_3.png]]
+![](images/excercise_2_3.png)
 
-![[Software Development/Actividad 6/images/excercise_2_4.png]]
+![](images/excercise_2_4.png)
 
 ---
 
@@ -172,7 +172,7 @@ $ git checkout -b feature-user-story-1
 $ git checkout -b feature-user-story-2
 ```
 
-![[excercise_2_1 1.png]]
+![](images/excercise_2_1%201.png)
 
 **Pregunta:** ¿Por qué es importante trabajar en ramas de funcionalidades separadas durante un sprint?
 
@@ -204,7 +204,7 @@ $ git checkout feature-user-story-1
 $ git rebase main
 ```
 
-![[excercise_2_2 1.png]]
+![](images/excercise_2_2 1.png)
 
 **Pregunta:** ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
 
@@ -238,7 +238,7 @@ $ git checkout main
 $ git cherry-pick <hash_del_commit_de_feature-lista>
 ```
 
-![[excercise_3.png]]
+![](images/excercise_3.png)
 
 **Pregunta:** ¿Cómo ayuda `git cherry-pick` a mostrar avances de forma selectiva en un sprint review?
 
@@ -274,9 +274,9 @@ $ git merge feature-user-story-1
 $ git merge feature-user-story-2
 ```
 
-![[Software Development/Actividad 6/images/excercise_4_1.png]]
+![](images/excercise_4_1.png)
 
-![[Software Development/Actividad 6/images/excercise_4_2.png]]
+![](images/excercise_4_2.png)
 
 **Pregunta**: ¿Cómo manejas los conflictos de fusión al final de un sprint? ¿Cómo puede el equipo mejorar la comunicación para evitar conflictos grandes?
 
@@ -316,9 +316,9 @@ $ git commit -m "Cambios importantes en feature 1"
 $ git push origin feature-user-story-1
 ```
 
-![[Software Development/Actividad 6/images/excercise_5_2.png]]
+![](images/excercise_5_2.png)
 
-![[Software Development/Actividad 6/images/excercise_5_1.png]]
+![](images/excercise_5_1.png)
 
 **Pregunta**: ¿Qué ventajas y desventajas observas al automatizar el rebase en un entorno de CI/CD?
 
@@ -467,21 +467,21 @@ $ git tag v2.4.4 <commit>
      $ cd proyecto-colaborativo
      ```
 
-![[Pasted image 20250422202902.png]]
+![](images/Pasted%20image%2020250422202902.png)
 
    - **Paso 2**: Inicializa Git en tu proyecto.
      ```bash
      $ git init
      ```
 
-![[Pasted image 20250422202929.png]]
+![](images/Pasted%20image%2020250422202929.png)
 
    - **Paso 3**: Crea un archivo de texto llamado `archivo_colaborativo.txt` y agrega algún contenido inicial.
      ```bash
      $ echo "Este es el contenido inicial del proyecto" > archivo_colaborativo.txt
      ```
 
-![[Pasted image 20250422204829.png]]
+![](images/Pasted%20image%2020250422204829.png)
 
    - **Paso 4**: Agrega el archivo al área de staging y haz el primer commit.
      ```bash
@@ -489,14 +489,14 @@ $ git tag v2.4.4 <commit>
      $ git commit -m "Commit inicial con contenido base"
      ```
 
-![[Pasted image 20250422205002.png]]
+![](images/Pasted%20image%2020250422205002.png)
 
    - **Paso 5**: Crea dos ramas activas: main y feature-branch.
      ```bash
      $ git branch feature-branch  # Crear una nueva rama
      ```
 
-![[Pasted image 20250422203325.png]]
+![](images/Pasted%20image%2020250422203325.png)
    
    - **Paso 6**: Haz checkout a la rama feature-branch y realiza un cambio en el archivo `archivo_colaborativo.txt`.
      ```bash
@@ -506,7 +506,7 @@ $ git tag v2.4.4 <commit>
      $ git commit -m "Cambios en feature-branch"
      ```
 
-![[Pasted image 20250422205153.png]]
+![](images/Pasted%20image%2020250422205153.png)
    
    - **Paso 7**: Regresa a la rama main y realiza otro cambio en la misma línea del archivo `archivo_colaborativo.txt`.
      ```bash
@@ -516,7 +516,7 @@ $ git tag v2.4.4 <commit>
      $ git commit -m "Cambios en main"
      ```
 
-![[Pasted image 20250422205304.png]]
+![](images/Pasted%20image%2020250422205304.png)
 
 2. **Fusión y resolución de conflictos**
 
@@ -525,7 +525,7 @@ $ git tag v2.4.4 <commit>
      $ git merge feature-branch
      ```
 
-![[Pasted image 20250422205408.png]]
+![](images/Pasted%20image%2020250422205408.png)
    
    - **Paso 2**: Usa `git status` para identificar los archivos en conflicto. Examina los archivos afectados y resuelve manualmente los conflictos, conservando las líneas de código más relevantes para el proyecto.
      ```bash
@@ -534,7 +534,7 @@ $ git tag v2.4.4 <commit>
      $ git checkout --ours <archivo>    # Si decides aceptar los cambios de main
      ```
 
-![[Pasted image 20250422205640.png]]
+![](images/Pasted%20image%2020250422205640.png)
    
    - **Paso 3**: Una vez resueltos los conflictos, commitea los archivos y termina la fusión
      ```bash
@@ -542,7 +542,7 @@ $ git tag v2.4.4 <commit>
      $ git commit -m "Conflictos resueltos"
      ```
 
-![[Pasted image 20250422205722.png]]
+![](images/Pasted%20image%2020250422205722.png)
 
 3. **Simulación de fusiones y uso de git diff**
 
