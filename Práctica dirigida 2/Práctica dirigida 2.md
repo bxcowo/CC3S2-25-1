@@ -22,7 +22,7 @@
 3. **Ubicación:**
    - Asegúrate de ejecutar el script dentro de la raíz de un repositorio Git, ya que el script interactúa con el entorno Git.
 
-![[Pasted image 20250423053053.png]]
+![](images/Pasted image 20250423053053.png)
 ### Procedimiento de la actividad
 
 A continuación se muestra un ejemplo de uso que ilustra una sesión interactiva con el script. Este ejemplo simula cómo un usuario podría interactuar con algunas de las opciones
@@ -48,7 +48,7 @@ del menú. Recuerda que, al ejecutarlo, verás mensajes en tiempo real en la ter
    Seleccione una opción:
    ```
 
-![[Pasted image 20250423053202.png]]
+![](images/Pasted image 20250423053202.png)
 
 13. **Opción: agregar un submódulo (Opción 2)**
 
@@ -76,7 +76,7 @@ del menú. Recuerda que, al ejecutarlo, verás mensajes en tiempo real en la ter
      Submódulo agregado en: libs/submodulo
      ```
 
-![[Pasted image 20250423053251.png]]
+![](images/Pasted image 20250423053251.png)
 
 3. **Opción: Gestión de ramas (Opción 4)**
 
@@ -109,7 +109,7 @@ del menú. Recuerda que, al ejecutarlo, verás mensajes en tiempo real en la ter
        Rama 'feature/login' creada y activada.
        ```
 
-![[Pasted image 20250423053329.png]]
+![](images/Pasted image 20250423053329.png)
 
 4. **Opción: Gestión de git diff (Opción 9)**
 
@@ -137,7 +137,7 @@ del menú. Recuerda que, al ejecutarlo, verás mensajes en tiempo real en la ter
      - **Usuario:** Escribe `feature/login`.
      - **Script:** Ejecuta `git diff master feature/login` y muestra las diferencias entre ambas ramas en la terminal.
 
-![[Pasted image 20250423053614.png]]
+![](images/Pasted image 20250423053614.png)
 
 5. **Opción: Gestión de hooks (Opción 10)**
 
@@ -170,7 +170,7 @@ del menú. Recuerda que, al ejecutarlo, verás mensajes en tiempo real en la ter
        Hook 'pre-commit' instalado.
        ```
 
-![[Pasted image 20250423053804.png]]
+![](images/Pasted image 20250423053804.png)
 
 6. **Finalizar la sesión**
 
@@ -227,9 +227,9 @@ Ingrese el nuevo nombre para la rama: feature/authentication
 Rama 'feature/login' renombrada a 'feature/authentication'
 ```
 
-![[Pasted image 20250423054528.png]]
+![](images/Pasted image 20250423054528.png)
 
-![[Pasted image 20250423054618.png]]
+![](images/Pasted image 20250423054618.png)
 
 2 . Amplia la sección de "Gestión de git diff" para permitir ver las diferencias de un archivo específico entre dos commits o ramas.
 
@@ -249,9 +249,9 @@ Ingrese la ruta del archivo: src/app.js
 [Mostrará el diff solo de 'src/app.js' entre las dos revisiones]
 ```
 
-![[Pasted image 20250423055224.png]]
+![](images/Pasted image 20250423055224.png)
 
-![[Pasted image 20250423055407.png]]
+![](images/Pasted image 20250423055407.png)
 
 3 . Crea una función que permita instalar automáticamente un hook que, por ejemplo, verifique si se han agregado comentarios de documentación en cada commit.
 
@@ -280,9 +280,9 @@ done
 exit 0
 ```
 
-![[Pasted image 20250423061008.png]]
+![](images/Pasted image 20250423061008.png)
 
-![[Pasted image 20250423061131.png]]
+![](images/Pasted image 20250423061131.png)
 
 4 . Implementa una opción en el script que realice un merge automatizado de una rama determinada en la rama actual, incluyendo la resolución automática de conflictos (siempre que sea posible).
 
@@ -304,9 +304,9 @@ Ingrese el nombre de la rama a fusionar: feature/login
 Merge completado automáticamente utilizando la estrategia 'theirs'.
 ```
 
-![[Pasted image 20250423062108.png]]
+![](images/Pasted image 20250423062108.png)
 
-![[Pasted image 20250423062246.png]]
+![](images/Pasted image 20250423062246.png)
 
 5 . Implementa una opción en el script que genere un reporte con información relevante del repositorio (estado, ramas, últimos commits, stashes, etc.) y lo guarde en un archivo.
 
@@ -334,6 +334,6 @@ Al ejecutar la función, se debe crear el archivo `reporte_git.txt` con contenid
 [Salida de git stash list]
 ```
 
-![[Pasted image 20250423062834.png]]
+![](images/Pasted image 20250423062834.png)
 
-![[Pasted image 20250423062804.png]]
+![](images/Pasted image 20250423062804.png)
