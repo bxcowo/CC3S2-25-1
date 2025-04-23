@@ -52,11 +52,11 @@ Elegir la estrategia de fusión adecuada es una decisión crítica para mantener
 
 Como no podemos clonar algún repositorio remoto de múltiples ramas que tengamos haremos uno nosotros de forma local. En este creamos un archivo `README.md` que inicializará el historial de estos cambios, luego crearemos una nueva rama llamada `feature` donde haremos ciertos cambios a el mismo archivo. 
 
-![[images/excercise_1_1.png]]
+![](images/excercise_1_1.png)
 
 Nos cambiamos a la rama main y ejecutamos el comando `git merge --ff`, si encontrásemos algún conflicto se tendrá que resolver manualmente, ahora cuando se halla realizado la combinación podremos ver nuestro historial de forma gráfica como `git log --graph --oneline`.
 
-![[Software Development/Actividad 5/images/excercise_1_2.png]]
+![](images/excercise_1_2.png)
 
    **Pregunta:** ¿En qué situaciones recomendarías evitar el uso de `git merge --ff`? Reflexiona sobre las desventajas de este método.
 
@@ -69,19 +69,19 @@ Cuando deseamos mantener el historial de los cambios realizados en otras ramas, 
 
 	Para este ejercicio contaremos con un repositorio de dos ramas independientes que contengan diferentes commits en cada una.
 
-![[Software Development/Actividad 5/images/excercise_2_1.png]]
+![](images/excercise_2_1.png)
 
 Basado en la construcción de dichas ramas, supongamos que deseamos combinar nuestros commits en nuestra rama prinicipal. Dentro de la rama main ejecutamos `git merge --no-ff feature`
 
-![[Software Development/Actividad 5/images/excercise_2_2.png]]
+![](images/excercise_2_2.png)
 
 Cuando se ejecute se nos pedirá insertar un mensaje para el commit merge.
 
-![[Software Development/Actividad 5/images/excercise_2_3.png]]
+![](images/excercise_2_3.png)
 
 Finalmente ejecutamos `git log --graph --oneline --all` podremos visualizar la estructura de dicho merge.
 
-![[Software Development/Actividad 5/images/excercise_2_4.png]]
+![](images/excercise_2_4.png)
 
    **Pregunta:** ¿Cuáles son las principales ventajas de utilizar `git merge --no-ff` en un proyecto en equipo? ¿Qué problemas podrían surgir al depender excesivamente de commits de fusión?
 
@@ -96,15 +96,15 @@ Sin embargo, un historial de commits completamente repleto de estos commits merg
 
 Crearemos un repositorio local donde crearemos un archivo `README.md` con el que iniciaremos el historial de cambios agregando dos líneas de texto.
 
-![[excercise_3_1.png]]
+![](images/excercise_3_1.png)
 
 Creamos una nueva rama llamada feature en la que realizaremos distintos cambios como añadir 2 nuevos archivos llamados archivo1.txt y archivo2.txt; además, commiteamos dichos nuevos cambios y verificamos el historial de forma gráfica.
 
-![[excercise_3_3.png]]
+![](images/excercise_3_3.png)
 
 Ahora regresamos a nuestra rama main y ejecutamos el comando de `git merge --squash feature` con lo que mezclaremos nuestras ramas; por último, podemos ver gráficamente nuestro historial mediante `git log --graph --oneline --all`
 
-![[excercise_3_4.png]]
+![](images/excercise_3_4.png)
 
    **Pregunta:** ¿Cuándo es recomendable utilizar una fusión squash? ¿Qué ventajas ofrece para proyectos grandes en comparación con fusiones estándar?
 
@@ -121,7 +121,7 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    git init
    ```
 
-![[excercise_4_1.png]]
+![](images/excercise_4_1.png)
 
 2. Crea un archivo index.html y realiza un commit en la rama main:
    ```bash
@@ -130,14 +130,14 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    git commit -m "commit inicial del  index.html en main"
    ```
 
-![[excercise_4_2.png]]
+![](images/excercise_4_2.png)
 
 3. Crea y cambia a una nueva rama feature-update:
    ```bash
    git checkout -b feature-update
    ```
 
-![[excercise_4_3.png]]
+![](images/excercise_4_3.png)
 
 4. Edita el archivo y realiza un commit en la rama feature-update:
    ```bash
@@ -146,7 +146,7 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    git commit -m "Actualiza ..."
    ```
 
-![[excercise_4_4.png]]
+![](images/excercise_4_4.png)
 
 5. Regresa a la rama main y realiza una edición en el mismo archivo:
    ```bash
@@ -156,14 +156,14 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    git commit -m "....index.html"
    ```
 
-![[excercise_4_5.png]]
+![](images/excercise_4_5.png)
 
 6. Fusiona la rama feature-update con --no-ff y observa el conflicto:
    ```bash
    git merge --no-ff feature-update
    ```
 
-![[excercise_4_6.png]]
+![](images/excercise_4_6.png)
 
 7. Git detectará un conflicto en index.html. Abre el archivo y resuelve el conflicto. Elimina las líneas de conflicto generadas por Git (`<<<<<<<`, `=======`, `>>>>>>>`) y crea la versión final del archivo con ambos cambios:
 
@@ -177,7 +177,7 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    </html>
    ```
 
-![[excercise_4_7.png]]
+![](images/excercise_4_7.png)
 
 8. Agrega el archivo corregido y completa la fusión:
    ```bash
@@ -185,14 +185,14 @@ En algunos casos, las fusiones no son tan sencillas y pueden surgir conflictos q
    git commit
 	```
 
-![[excercise_4_8.png]]
+![](images/excercise_4_8.png)
 
 8. Verifica el historial para confirmar la fusión y el commit de resolución de conflicto:
    ```bash
    git log --graph --oneline
    ```
 
-![[excercise_4_9.png]]
+![](images/excercise_4_9.png)
 
 **Preguntas:**
 - ¿Qué pasos adicionales tuviste que tomar para resolver el conflicto?
@@ -229,7 +229,7 @@ Este ejercicio te permitirá observar las diferencias en el historial generado p
    git commit -m "Se agrega caracteristica 2"
    ```
 
-![[excercise_5_1.png]]
+![](images/excercise_5_1.png)
 
 2. Fusiona feature-1 usando fast-forward:
    ```bash
@@ -237,18 +237,18 @@ Este ejercicio te permitirá observar las diferencias en el historial generado p
    git merge feature-1 --ff
    ```
 
-![[excercise_5_2.png]]
+![](images/excercise_5_2.png)
 
 3. Fusiona feature-2 usando non-fast-forward:
    ```bash
    git merge feature-2 --no-ff
    ```
 
-![[excercise_5_3.png]]
+![](images/excercise_5_3.png)
 
-![[excercise_5_4.png]]
+![](images/excercise_5_4.png)
 
-![[excercise_5_5.png]]
+![](images/excercise_5_5.png)
 
 4. Realiza una nueva rama feature-3 con múltiples commits y fusiónala con squash:
    ```bash
@@ -264,7 +264,7 @@ Este ejercicio te permitirá observar las diferencias en el historial generado p
    git commit -m "Agregar caracteristica 3 en un commit"
    ```
 
-![[excercise_5_6.png]]
+![](images/excercise_5_6.png)
 
 5. Compara el historial de Git:
    - Historial Fast-forward:
@@ -272,21 +272,21 @@ Este ejercicio te permitirá observar las diferencias en el historial generado p
      git log --graph --oneline --first-parent
      ```
 
-![[excercise_5_7.png]]
+![](images/excercise_5_7.png)
 
    - Historial Non-fast-forward:
      ```bash
      git log --graph --oneline --merges
      ```
 
-![[excercise_5_8.png]]
+![](images/excercise_5_8.png)
 
    - Historial con Squash:
      ```bash
      git log --graph --oneline --decorate --all
      ```
 
-![[excercise_5_9.png]]
+![](images/excercise_5_9.png)
 
 **Preguntas:**
 - ¿Cómo se ve el historial en cada tipo de fusión?
@@ -317,7 +317,7 @@ En este ejercicio, aprenderás cómo Git puede fusionar automáticamente cambios
    git commit -m "...linea 2"
    ```
 
-![[excercise_6_1.png]]
+![](images/excercise_6_1.png)
 
 2. Crea una nueva rama auto-merge y realiza otro commit en file.txt:
    ```bash
@@ -327,7 +327,7 @@ En este ejercicio, aprenderás cómo Git puede fusionar automáticamente cambios
    git commit -m "... linea 3"
 	```
 
-![[excercise_6_2.png]]
+![](images/excercise_6_2.png)
 
 3. Vuelve a main y realiza cambios no conflictivos en otra parte del archivo:
    ```bash
@@ -337,14 +337,14 @@ En este ejercicio, aprenderás cómo Git puede fusionar automáticamente cambios
    git commit -m "Add nuevo archivo llamado file2.txt"
    ```
 
-![[excercise_6_3.png]]
+![](images/excercise_6_3.png)
 
 4. Fusiona la rama auto-merge con main:
    ```bash
    git merge auto-merge
    ```
 
-![[excercise_6_4.png]]
+![](images/excercise_6_4.png)
 
 5. Git debería fusionar los cambios automáticamente sin conflictos.
 
@@ -353,14 +353,14 @@ En este ejercicio, aprenderás cómo Git puede fusionar automáticamente cambios
    git revert -m 1 HEAD
    ```
 
-![[excercise_6_5.png]]
+![](images/excercise_6_5.png)
 
 7. Verifica el historial:
    ```bash
    git log --graph --oneline
    ```
 
-![[excercise_6_6.png]]
+![](images/excercise_6_6.png)
 
 **Preguntas:**
 - ¿Cuándo usarías un comando como git revert para deshacer una fusión?
@@ -383,7 +383,7 @@ Este ejercicio te permitirá practicar la fusión de ramas en un entorno remoto 
    cd nombre-del-repositorio
    ```
 
-![[excercise_7_1.png]]
+![](images/excercise_7_1.png)
 
 2. Crea una nueva rama colaboracion y haz algunos cambios:
    ```bash
@@ -393,26 +393,26 @@ Este ejercicio te permitirá practicar la fusión de ramas en un entorno remoto 
    git commit -m "...."
    ```
 
-![[excercise_7_2.png]]
+![](images/excercise_7_2.png)
 
 3. Empuja los cambios a la rama remota:
    ```bash
    git push origin colaboracion
    ```
 
-![[excercise_7_3.png]]
+![](images/excercise_7_3.png)
 
 4. Simula una fusión desde la rama colaboracion en la rama main de otro colaborador. (Puedes usar la interfaz de GitHub para crear un Pull Request y realizar la fusión).
 
-![[excercise_7_4.png]]
+![](images/excercise_7_4.png)
 
-![[excercise_7_5.png]]
+![](images/excercise_7_5.png)
 
-![[excercise_7_6.png]]
+![](images/excercise_7_6.png)
 
-![[excercise_7_7.png]]
+![](images/excercise_7_7.png)
 
-![[excercise_7_8.png]]
+![](images/excercise_7_8.png)
 
 **Preguntas:**
 - ¿Cómo cambia la estrategia de fusión cuando colaboras con otras personas en un repositorio remoto?
@@ -435,59 +435,59 @@ Configura un proyecto simulado:
 
 Se simulará un mini proyecto colaborativo entre 4 distintas ramas de trabajo: main, feature1, feature2 y feature3. Donde haremos diferentes cambios y probaremos las formas de merging dadas: --ff, --no-ff y squash.
 
-![[excercise_8_1.png]]
+![](images/excercise_8_1.png)
 
 Ya hemos añadido un archivo llamado presentacion.md a la rama feature1, ahora añadiremos otro nuevo archivo llamado chistes.md y añadiremos una lista.
 
-![[excercise_8_2.png]]
+![](images/excercise_8_2.png)
 
 Pasaremos a la rama feature2, donde realizaremos ciertas modificaciones a los archivos que teníamos al crearlos nuevamente con ligeros cambios.
 
-![[excercise_8_3.png]]
+![](images/excercise_8_3.png)
 
 Además dentro de la rama feature2, también añadiremos un archivo main.cpp que pueda contar los numeros desde 1 hasta 20.
 
-![[excercise_8_4.png]]
+![](images/excercise_8_4.png)
 
 Por último nos cambiamos a la rama feature3 y añadimos una nueva versión del archivo chistes.md
 
-![[excercise_8_5.png]]
+![](images/excercise_8_5.png)
 
 Ahora que las ramas de desarrollo fueron concluidas, procederemos a fusionarlas con la rama main, comenzaremos con feature1 y un merge --ff.
 
-![[excercise_8_6.png]]
+![](images/excercise_8_6.png)
 
 Notamos que no nos encontramos con ningun conflicto, ahora procederemos a realizar un merge --no-ff con la rama feature2.
 
-![[excercise_8_7.png]]
+![](images/excercise_8_7.png)
 
 Aquí ocurre un pequeño conflicto en el archivo presentación.md para lo cual la abriremos con editor de texto y corregiremos manualmente
 
-![[excercise_8_8.png]]
+![](images/excercise_8_8.png)
 
 Solucionaremos dicho conflicto de la siguiente forma y tendremos lo siguiente:
 
-![[excercise_8_9.png]]
+![](images/excercise_8_9.png)
 
 Una vez corregido dicho conflicto, lo añadiremos y commitearemos con todos los cambios para la creación del commit merge
 
-![[excercise_8_10.png]]
+![](images/excercise_8_10.png)
 
 Ahora por último realizaremos un merge --squash con la rama feature3
 
-![[excercise_8_11.png]]
+![](images/excercise_8_11.png)
 
 Nuevamente nuestro merge fallo por un conflicto en chistes.md, así que editamos y corregimos manualmente
 
-![[excercise_8_12.png]]
+![](images/excercise_8_12.png)
 
 Añadimos nuestra corrección y commiteamos.
 
-![[excercise_8_13.png]]
+![](images/excercise_8_13.png)
 
 Podremos visualizar nuestro log de forma interactiva como el siguiente gráfico.
 
-![[excercise_8_14.png]]
+![](images/excercise_8_14.png)
 
 Analiza el historial de commits:
 
