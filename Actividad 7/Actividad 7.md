@@ -59,7 +59,7 @@ El proyecto tiene la siguiente estructura de directorios:
     - Agrega la ejecución de `behave` y `pytest` en tu _pipeline_ de CI/CD, de modo que al hacer push de los cambios se ejecuten automáticamente las pruebas.
 
 **Solución**
-Dentro de un proyecto ya contamos con un soporte para el proceso de expresiones regulares que incluyan horas con minutos y solamente minutos; sin embargo, falta aquella que maneja solo segundos y mezclas entre ellos. 
+Dentro de un proyecto ya contamos con un soporte para el proceso de expresiones regulares que incluyan horas con minutos y solamente minutos; sin embargo, falta aquella que maneja solo segundos y mezclas entre ellos.
 Editaremos dentro de la función `step_when_wait_time_description`, para añadir la aceptación de expresiones regulares con segundos.
 
 ![](images/excercise_1_1.png)
@@ -148,4 +148,12 @@ Escenario: Esperar usando horas en inglés
   Entonces mi estómago debería gruñir
 ```
 
+Hemos modificado el archivo `belly_steps.py` para que admitiese valores en ingles y en español para las descripciones de tiempos con nuevas conversiones y cambios dentro del patron de regex.
 
+![](images/image1.png)
+
+También añadimos 2 nuevos escenarios en `belly.feature` y ambos fueron admitidos correctamente:
+
+![](images/image2.png)
+
+![](images/image3.png)
