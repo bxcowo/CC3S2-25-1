@@ -1,7 +1,3 @@
-from _pytest.fixtures import showfixtures
-from typing_extensions import DefaultDict
-
-
 class UserAlreadyExistsError(Exception):
     pass
 
